@@ -1,0 +1,1 @@
+noOfElements xs = length xs
