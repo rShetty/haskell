@@ -9,7 +9,6 @@ within eps (x:(y:ys))
      | abs (x-y) <= eps = y
      | otherwise = within eps ys
 
-newtonSqrt :: (Ord a, Num a, Fractional a) => a -> a -> a -> a
-newtonSqrt n init eps = within eps (repeat' (next n) init)
-
+newtonSqrt :: (Ord a, Num a, Fractional a) => a -> a -> a
+newtonSqrt n eps = within eps . repeat' (next n) $ 1
 
